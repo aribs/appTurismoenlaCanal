@@ -1,0 +1,11 @@
+
+img{
+	border-radius:12px;
+	width:90%;
+}
+body{display:flex;
+			justify-content: center;}
+.etiqueta{
+ margin-top:5%;
+}
+#etiquetaInfo:{margin-left:100px;}

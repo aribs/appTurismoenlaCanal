@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mapa</title>
+  <link rel=stylesheet href="css/estiloEstandar.css" type="text/css" MEDIA=SCREEN>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  <script type="text/javascript" src="gmaps.js"></script>
+  <script type="text/javascript">
+    var map; 
+	var miLatitud;
+	var miLongitud;
+	
+    $(document).ready(function(){
+	function Geolocalizar(){
+		GMaps.geolocate({
+			success: function(position){
+				miLatitud = position.coords.latitude;
+				miLongitud = position.coords.longitude;
+			},
+			
+			
+		
+		});
+	
+	
+	};
+	
+
+	Geolocalizar();
+  39.001495, -0.658061
+
+      map = new GMaps({
+        div: '#map',
+        lat: 39.001495,
+        lng: -0.658061,
+        zoom: 15,
+        zoomControl : true,
+        zoomControlOpt: {
+            style : 'SMALL',
+            position: 'TOP_RIGHT'
+        },
+        panControl : true,
+        streetViewControl : true,
+        mapTypeControl: false
+      });
+
+      map.addMarker({
+        lat: 39.001495,
+        lng: -0.658061,
+        title: 'Fuente de Marzo',
+        
+      });
+	  
+	  
+    });
+  </script>
+  <style>
+
+
+  </style>
+</head>
+<body>
+
+      <div id="map"></div>
+
+</body>
+</html>

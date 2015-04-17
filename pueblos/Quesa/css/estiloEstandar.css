@@ -1,0 +1,24 @@
+
+img{
+	border-radius:12px;
+	
+}
+
+body{display:flex;
+			justify-content: center;}
+#principal{
+	max-width:340px;
+}
+.etiqueta{
+ margin-top:5%;
+ margin-left:1%;
+ width:90%;
+ max-width:340px;
+ text-align:justify;
+ }
+ #fotoPortada{
+	margin-top:10%;
+	width:10%;
+ }
+}
+#etiquetaInfo:{margin-left:100px;}
